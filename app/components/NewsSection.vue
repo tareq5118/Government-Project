@@ -1,45 +1,8 @@
 <script setup>
 import ButtonUI from './ui/ButtonUI.vue';
+const props=defineProps(['newsItems'])
 
 
-const newsItems = ref([
-  {
-    id: 1,
-    date: "2026-01-18",
-    title:
-      "بيان صادر عن وزارة الخارجية والمغتربين في الجمهورية العربية السورية",
-    summary: "تؤكد الجمهورية العربية السورية على وحدة الشعب السوري وتماسكه...",
-    link: "/news/بيان-صادر-عن-الوزارة",
-    image: "/images/01KBMDQK85NR0S3R26J915TV3H-featured_image_thumb.webp",
-  },
-  {
-    id: 2,
-    date: "2026-01-18",
-    title:
-      "بيان صادر عن وزارة الخارجية والمغتربين في الجمهورية العربية السورية",
-    summary: "تؤكد الجمهورية العربية السورية على وحدة الشعب السوري وتماسكه...",
-    link: "/news/بيان-صادر-عن-الوزارة",
-    image: "/images/01KBMDZ3JR5RVYM43WRQKVKATF-featured_image_thumb.webp",
-  },
-  {
-    id: 3,
-    date: "2026-01-18",
-    title:
-      "بيان صادر عن وزارة الخارجية والمغتربين في الجمهورية العربية السورية",
-    summary: "تؤكد الجمهورية العربية السورية على وحدة الشعب السوري وتماسكه...",
-    link: "/news/بيان-صادر-عن-الوزارة",
-    image: "/images/01K042ENG86WPF1363SZBZ94T7.png",
-  },
-  {
-    id: 4,
-    date: "2026-01-18",
-    title:
-      "بيان صادر عن وزارة الخارجية والمغتربين في الجمهورية العربية السورية",
-    summary: "تؤكد الجمهورية العربية السورية على وحدة الشعب السوري وتماسكه...",
-    link: "/news2/بيان-صادر-عن-الوزارة",
-    image: "/images/01KC9J6W31PGTRJ8TW12PCMF1R-featured_image_thumb.webp",
-  },
-]);
 </script>
 <template>
   <section
@@ -51,24 +14,26 @@ const newsItems = ref([
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <div
-          v-for="news in newsItems"
+          v-for="news in props.newsItems"
           :key="news.id"
-          class="p-6 rounded-[10px] mx-auto shadow hover:shadow-md transition-shadow"
+          class="p-6 rounded-[10px] mx-auto shadow hover:shadow-md transition-shadow gap-8"
         >
           <img
-            class="mb-4 rounded-2xl w-96 h-62.5 hover:scale-105 hover:cursor-pointer"
+            class="mb-4 rounded-2xl w-full h-62.5 hover:scale-105 object-cover hover:cursor-pointer"
             :src="news.image"
             alt=""
+            width="370"
+            height="250"
           />
-          <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">
+          <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">
             {{ news.date }}
           </p>
           <h3
-            class="text-lg font-semibold mb-3 line-clamp-2 hover:cursor-pointer"
+            class="text-lg font-bold mb-4 line-clamp-2 hover:cursor-pointer"
           >
             {{ news.title }}
           </h3>
-          <p class="text-gray-700 dark:text-gray-300 mb-4 line-clamp-3">
+          <p class="text-gray-700 dark:text-gray-300 mb-4 line-clamp-2">
             {{ news.summary }}
           </p>
          <ButtonUI :link="news.link">أقرأ المزيد</ButtonUI>

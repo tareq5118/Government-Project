@@ -1,6 +1,6 @@
 <template>
   <footer
-    class="bg-secondary text-syria-white py-12 px-4 md:px-6 lg:px-8 md:w-[92%] md:mx-auto"
+    class="bg-secondary text-syria-white py-12 px-4 md:px-6 sticky buttom-0 lg:px-8 md:w-[85%] md:mx-auto"
   >
     <div class="container mx-auto">
       <div
