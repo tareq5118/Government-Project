@@ -5,7 +5,7 @@ let openMenu = ref(false);
 </script>
 <template>
   <div
-    class="flex justify-between bg-Primary md:bg-white items-center  mx-auto md:w-[92%] md:mx-auto h-full py-2"
+    class="flex justify-between bg-Primary md:bg-white items-center mx-auto md:w-[85%] md:mx-auto h-full py-8 md:bg-[url(/images/star.png)]"
   >
     <div class="me-4 ms-0 md:mx-2">
       <nuxt-link to="/">
@@ -18,14 +18,14 @@ let openMenu = ref(false);
     </div>
     <div class="flex justify-between items-center">
       <div
-        class="w-full border md:border-border  border-white  rounded-lg sm:rounded-xl py-2 px-2 flex justify-around items-center"
+        class="w-full border md:border-border border-white rounded-lg sm:rounded-xl py-2 px-2 flex justify-around items-center"
       >
         <input
           type="search"
           placeholder="البحث"
-          class="outline-none text-sm placeholder-white md:placeholder-gray-600  sm:text-base sm:w-auto w-18  "
+          class="outline-none text-sm placeholder-white md:placeholder-gray-600 sm:text-base sm:w-auto w-18"
         />
-        <button class="hover:cursor-pointer ">
+        <button class="hover:cursor-pointer">
           <span
             ><svg
               xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +33,7 @@ let openMenu = ref(false);
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              class="size-4 sm:size-5 md:size-6 text-white md:text-Primary "
+              class="size-4 sm:size-5 md:size-6 text-white md:text-Primary"
             >
               <path
                 stroke-linecap="round"
@@ -92,7 +92,7 @@ let openMenu = ref(false);
 
     <div class="text-sm sm:text-base hover:cursor-pointer hidden">icons</div>
   </div>
-  <div v-if="openMenu" class=" bg-Primary">
+  <div v-if="openMenu" class="bg-Primary">
     <MainNav class="" :mobile="true" @close="openMenu = false" />
   </div>
 </template>
