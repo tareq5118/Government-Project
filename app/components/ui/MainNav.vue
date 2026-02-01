@@ -49,7 +49,7 @@ const props = defineProps({
       :class="[props.mobile ? 'left-0 ' : '-left-full ']"
     >
       <li
-        class="text-white text-bold font-medium my-2  pe-2 md:border-l hover:cursor-pointer last-of-type:border-0 transition border-border md:border-b-0 md:border-l-white hover:bg-hover hover:md:bg-inherit  px-2 py-2 "
+        class="text-white text-bold font-medium my-2  pe-2 md:border-l hover:cursor-pointer last-of-type:border-0 transition border-border md:border-b-0 md:border-l-white hover:bg-hover hover:md:bg-inherit  px-2  "
         v-for="link in Links"
         ,
         :v-key="link.name"

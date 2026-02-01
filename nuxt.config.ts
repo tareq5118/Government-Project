@@ -22,4 +22,5 @@ dir:'rtl'
       tailwindcss(),
     ],
   },
+  
 });

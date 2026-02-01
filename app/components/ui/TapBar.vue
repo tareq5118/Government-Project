@@ -5,7 +5,7 @@ let openMenu = ref(false);
 </script>
 <template>
   <div
-    class="flex justify-between bg-Primary md:bg-white items-center mx-auto md:w-[85%] md:mx-auto h-full py-8 md:bg-[url(/images/star.png)]"
+    class="flex justify-between bg-Primary md:bg-white items-center mx-auto md:w-[85%] md:mx-auto h-full py-7.5 md:bg-[url(/images/star.png)]"
   >
     <div class="me-4 ms-0 md:mx-2">
       <nuxt-link to="/">

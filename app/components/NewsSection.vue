@@ -1,4 +1,7 @@
 <script setup>
+import ButtonUI from './ui/ButtonUI.vue';
+
+
 const newsItems = ref([
   {
     id: 1,
@@ -33,7 +36,7 @@ const newsItems = ref([
     title:
       "بيان صادر عن وزارة الخارجية والمغتربين في الجمهورية العربية السورية",
     summary: "تؤكد الجمهورية العربية السورية على وحدة الشعب السوري وتماسكه...",
-    link: "/news/بيان-صادر-عن-الوزارة",
+    link: "/news2/بيان-صادر-عن-الوزارة",
     image: "/images/01KC9J6W31PGTRJ8TW12PCMF1R-featured_image_thumb.webp",
   },
 ]);
@@ -68,28 +71,7 @@ const newsItems = ref([
           <p class="text-gray-700 dark:text-gray-300 mb-4 line-clamp-3">
             {{ news.summary }}
           </p>
-          <button>
-            <nuxt-link
-              :to="news.link"
-              class="flex justify-between items-center gap-2 border border-gray-300 text-Primary hover:bg-Primary hover:text-white p-2.5 transition font-medium rounded-lg"
-            >
-              <span class="">اقرأ المزيد </span>
-              <span
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  class="size-5 mt-2"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M17 10a.75.75 0 0 1-.75.75H5.612l4.158 3.96a.75.75 0 1 1-1.04 1.08l-5.5-5.25a.75.75 0 0 1 0-1.08l5.5-5.25a.75.75 0 1 1 1.04 1.08L5.612 9.25H16.25A.75.75 0 0 1 17 10Z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-              </span>
-            </nuxt-link>
-          </button>
+         <ButtonUI :link="news.link">أقرأ المزيد</ButtonUI>
         </div>
       </div>
 
