@@ -8,6 +8,6 @@ import TapBar from '~/components/TapBar.vue';
     <div>
         <!-- <h3>this is components default </h3> -->
         <TapBar/>
-        <MainNav/>
+        <MainNav class="hidden md:block"/>
     </div>
 </template>
