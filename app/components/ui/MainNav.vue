@@ -23,7 +23,7 @@ let Links = ref([
   },
   {
     name: "تواصل معنا",
-    link: "/content",
+    link: "/contact",
   },
 ]);
 // let openMenu=ref(false);
