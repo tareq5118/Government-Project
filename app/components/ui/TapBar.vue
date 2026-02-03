@@ -5,7 +5,7 @@ let openMenu = ref(false);
 </script>
 <template>
   <div
-    class="flex justify-between bg-Primary md:bg-white items-center mx-auto md:w-[85%] md:mx-auto h-full py-7.5 md:bg-[url(/images/star.png)]"
+    class="flex justify-between bg-Primary  md:bg-white items-center mx-auto md:w-[85%] md:mx-auto h-full py-7.5 md:bg-[url(/images/star.png)]"
   >
     <div class="me-4 ms-0 md:mx-2">
       <nuxt-link to="/">
@@ -51,7 +51,7 @@ let openMenu = ref(false);
       </button>
     </div>
     <span
-      class="md:hidden left-0 hover:cursor-pointer text-4xl"
+      class="md:hidden left-0 hover:cursor-pointer mx-2 text-4xl"
       @click="openMenu = !openMenu"
     >
       <!-- <i :class="[openMenu?'bi bi-x':'bi bi-filter-left']"></i>
@@ -63,7 +63,7 @@ let openMenu = ref(false);
           viewBox="0 0 24 24"
           stroke-width="1.5"
           stroke="currentColor"
-          class="size-9 md:text-Primary text-logo"
+          class="size-8 md:text-Primary text-logo"
         >
           <path
             stroke-linecap="round"
@@ -79,7 +79,7 @@ let openMenu = ref(false);
           viewBox="0 0 24 24"
           stroke-width="1.5"
           stroke="currentColor"
-          class="size-9 md:text-Primary text-logo rounded-xl border"
+          class="size-8 md:text-Primary text-logo  rounded-xl border"
         >
           <path
             stroke-linecap="round"
@@ -92,7 +92,7 @@ let openMenu = ref(false);
 
     <div class="text-sm sm:text-base hover:cursor-pointer hidden">icons</div>
   </div>
-  <div v-if="openMenu" class="bg-Primary">
+  <div v-if="openMenu" class="bg-Primary ">
     <MainNav class="" :mobile="true" @close="openMenu = false" />
   </div>
 </template>

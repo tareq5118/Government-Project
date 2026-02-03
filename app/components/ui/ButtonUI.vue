@@ -5,15 +5,15 @@ const props=defineProps(['link'])
      <button>
             <nuxt-link
               :to="props.link"
-              class="flex justify-between items-center gap-2 border border-gray-300 text-Primary hover:bg-Primary hover:text-white p-2.5 transition hover:cursor-pointer font-sm rounded-lg"
+              class="flex justify-between items-center gap-2 border border-gray-300 text-Primary hover:bg-Primary hover:text-white md:p-2.5 p-1 transition hover:cursor-pointer font-sm rounded-lg"
             >
-              <span class=""><slot></slot></span>
+              <span class="text-sm md:text-xl"><slot></slot></span>
               <span
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
                   fill="currentColor"
-                  class="size-5 mt-2"
+                  class="size-3 mt-2"
                 >
                   <path
                     fill-rule="evenodd"

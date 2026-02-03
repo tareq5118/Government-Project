@@ -5,7 +5,10 @@
     
     <!-- <NuxtPage/>
     <NuxtLayout/> -->
-    <NuxtLayout> <NuxtPage/></NuxtLayout>
+    <NuxtLayout>
+       <NuxtPage/>
+       
+      </NuxtLayout>
    
 
 
