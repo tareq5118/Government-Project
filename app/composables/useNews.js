@@ -1,0 +1,126 @@
+import { ref, computed } from "vue";
+
+export const useNews = () => {
+  const newsList = ref([
+    {
+      id: 1,
+      date: "2026-01-18",
+      title:
+        "بيان صادر عن وزارة الخارجية والمغتربين في الجمهورية العربية السورية",
+      summary:
+        "تؤكد الجمهورية العربية السورية على وحدة الشعب السوري وتماسكه...",
+      link: "/news",
+      image: "/images/01KBMDQK85NR0S3R26J915TV3H-featured_image_thumb.webp",
+    },
+    {
+      id: 2,
+      date: "2026-01-18",
+      title:
+        "بيان صادر عن وزارة الخارجية والمغتربين في الجمهورية العربية السورية",
+      summary:
+        "تؤكد الجمهورية العربية السورية على وحدة الشعب السوري وتماسكه...",
+      link: "/news",
+      image: "/images/01KBMDZ3JR5RVYM43WRQKVKATF-featured_image_thumb.webp",
+    },
+    {
+      id: 3,
+      date: "2026-01-18",
+      title:
+        "بيان صادر عن وزارة الخارجية والمغتربين في الجمهورية العربية السورية",
+      summary:
+        "تؤكد الجمهورية العربية السورية على وحدة الشعب السوري وتماسكه...",
+      link: "/news",
+      image: "/images/01K042ENG86WPF1363SZBZ94T7.png",
+    },
+    {
+      id: 4,
+      date: "2026-01-18",
+      title:
+        "بيان صادر عن وزارة الخارجية والمغتربين في الجمهورية العربية السورية",
+      summary:
+        "تؤكد الجمهورية العربية السورية على وحدة الشعب السوري وتماسكه...",
+      link: "/news2",
+      image: "/images/01KC9J6W31PGTRJ8TW12PCMF1R-featured_image_thumb.webp",
+    },
+    {
+      id: 5,
+      date: "2026-01-28",
+      title:
+        "بيان صادر عن وزارة الخارجية والمغتربين بشأن التطورات السياسية الأخيرة",
+      summary:
+        "تؤكد الجمهورية العربية السورية التزامها الكامل بوحدة أراضيها وسيادتها الوطنية، وتدين أي تدخل خارجي يمس استقلالها...",
+      link: "#",
+      image: "/images/01KC9J6W31PGTRJ8TW12PCMF1R-featured_image_thumb (1).webp",
+    },
+    {
+      id: 6,
+      date: "2026-01-25",
+      title:
+        "اجتمع السيد الرئيس أحمد الشرع مع رئيس الجمهورية الفرنسية السيد إيمانويل ماكرون، بحضور وزير الخارجية السيد أسعد الشيباني، في مدينة بيليم البرازيلية التي تستضيف مؤتمر قمة المناخ (COP30",
+      summary:
+        "تم خلال اللقاء بحث تعزيز العلاقات الثنائية وتفعيل التعاون في المجالات الاقتصادية والإنسانية...",
+      link: "#",
+      image: "/images/01KA608FA9R9WR52CK2RDDNVWF-featured_image_thumb.webp",
+    },
+    {
+      id: 6,
+      date: "2026-01-20",
+      title: "الجمهورية العربية السورية تدين العدوان على الأراضي السورية",
+      summary:
+        "تصريح رسمي يدين الاعتداءات المتكررة على الأراضي السورية ويطالب المجتمع الدولي بتحمل مسؤولياته...",
+      link: "#",
+      image: "/images/01K9VTKJG1SKH5PCJJZVPQQ9KS-featured_image_thumb.webp",
+    },
+    {
+      id: 7,
+      date: "2026-01-15",
+      title:
+        "استقبل وزير الخارجية والمغتربين السيد أسعد حسن الشيباني اليوم في العاصمة دمشق وفد ألماني برئاسة نائب مستشار الأمن القومي لدى المستشارية الاتحادية الألمانية",
+      summary:
+        "تهدف الخطوة إلى تسريع إجراءات المواطنين السوريين المقيمين في الإمارات العربية المتحدة...",
+      link: "#",
+      image: "/images/01K9VTFMA3VHXB364MBQ0JAQ86-featured_image_thumb.webp",
+    },
+    {
+      id: 8,
+      date: "2026-01-10",
+      title:
+        "لقاء جمع السيد الرئيس أحمد الشرع مع رئيس مجموعة البنك الدولي السيد أجاي بانغا، بحضور وزير الخارجية والمغتربين السيد أسعد الشيباني",
+      summary:
+        "ألقى الوزير كلمة أكد فيها على أهمية تعزيز التعاون بين دول الجنوب...",
+      link: "#",
+      image: "/images/01K9VSGX328VP9RMPS92B1C62Y-featured_image_thumb.webp",
+    },
+  ]);
+
+  // دالة لجلب خبر واحد حسب الـ id
+//   const getNewsById = (id) => {
+//     return newsList.value.find((item) => item.id === id);
+//   };
+const getNewsById = (id) => {
+  // حول الـ id الوارد (من الرابط) إلى رقم
+  const numericId = Number(id)
+  
+  // ابحث باستخدام الرقم
+  return newsList.value.find(item => item.id === numericId)
+}
+  
+
+  // عدد الأخبار الكلي (مفيد لاحقًا)
+  const totalNews = computed(() => newsList.value.length);
+
+  // يمكنك إضافة فلاتر أو فرز لاحقًا هنا
+  // مثال: أحدث 5 أخبار
+  const latestNews = computed(() => {
+    return [...newsList.value]
+      .sort((a, b) => new Date(b.date) - new Date(a.date))
+      .slice(0, 5);
+  });
+
+  return {
+    newsList,
+    getNewsById,
+    totalNews,
+    latestNews,
+  };
+};

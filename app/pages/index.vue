@@ -21,6 +21,7 @@ useHead({
     <!-- <NewsSection    class="order-1 md:order-0" /> -->
     <!-- <NuxtPage/> -->
     <!-- <ServicesSection class="order-2 md:order-0" /> -->
+     
   </div>
 </template>
 

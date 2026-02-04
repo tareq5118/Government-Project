@@ -49,12 +49,14 @@ const props = defineProps({
       :class="[props.mobile ? 'left-0  ' : 'hidden ']"
     >
       <li
-        class="text-white text-bold font-medium my-2  pe-2 md:border-l hover:cursor-pointer last-of-type:border-0 transition border-border md:border-b-0 md:border-l-white hover:bg-hover hover:md:bg-inherit  px-2  "
+        class="text-white text-bold font-medium my-2  pe-2 py-4 md:py-0 md:border-l hover:cursor-pointer last-of-type:border-0 transition border-border md:border-b-0 md:border-l-white hover:bg-hover hover:md:bg-inherit  px-2  "
         v-for="link in Links"
         ,
         :v-key="link.name"
       >
-        <nuxt-link class=""  :to="link.link">{{ link.name }}</nuxt-link>
+        <nuxt-link class=""  :to="link.link">{{ link.name }}
+          
+        </nuxt-link>
       </li>
     </ul>
   </nav>
