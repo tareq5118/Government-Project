@@ -19,7 +19,7 @@
               {{ slide.date }}
             </p>
             <h2
-              class="text-xl sm:text-2xl md:text-3xl lg:text-3xl font-bold max-w-4xl my-2 line-clamp-2 md:line-clamp-4"
+              class="text-xl sm:text-2xl md:text-3xl lg:text-3xl font-bold max-w-4xl my-2 line-clamp-2 md:line-clamp-3"
             >
               {{ slide.title }}
             </h2>

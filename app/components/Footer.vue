@@ -1,10 +1,10 @@
 <template>
   <footer
-    class="bg-secondary text-syria-white  px-4 md:px-8 sticky buttom-0 lg:px-8 md:w-[85%] md:mx-auto"
+    class="bg-secondary text-syria-white py-12 px-4 md:px-6 sticky buttom lg:px-8 md:w-[85%] md:mx-auto"
   >
-    <div class="container mx-auto">
+    <div class=" mx-auto">
       <div
-        class="grid grid-col-1 md:grid-cols-2 lg:grid-cols-6 gap-8 md:gap-10 lg:gap-12 mb-2 lg:mb-6 pb-4 lg:pb-12 pt-7.5 pe-12 ps-4"
+        class="grid grid-col-1 md:grid-cols-2 lg:grid-cols-6 gap-8 md:gap-10 lg:gap-12 mb-2 lg:mb-6 pb-4 lg:pb-0 pt-7.5 pe-12 ps-4"
       >
         <div class="w-50">
           <img

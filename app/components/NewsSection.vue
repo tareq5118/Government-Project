@@ -6,9 +6,9 @@ const props=defineProps(['newsItems'])
 </script>
 <template>
   <section
-    class="py-10 md:py-12 md:w-[92%] md:mx-auto bg-white rounded-lg mb-10"
+    class="py-10 md:py-12 md:w-[85%] md:mx-auto bg-white rounded-lg mb-10"
   >
-    <div class="container mx-auto px-4">
+    <div class="container mx-auto px-4 sm:px-0">
       <h2 class="text-2xl md:text-3xl font-bold text-center mb-8">
 أخبار وزارة الخارجية      </h2>
 
@@ -36,7 +36,7 @@ const props=defineProps(['newsItems'])
           <p class="text-gray-700 dark:text-gray-300 mb-4 line-clamp-2">
             {{ news.summary }}
           </p>
-         <ButtonUI :link="news.link">أقرأ المزيد</ButtonUI>
+         <ButtonUI :link="`/news/${news.id}`">أقرأ المزيد</ButtonUI>
         </div>
       </div>
 

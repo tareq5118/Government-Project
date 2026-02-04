@@ -9,7 +9,7 @@ import TapBar from '~/components/ui/TapBar.vue';
 
 <template>
 <div class="min-h-screen flex flex-col" dir="rtl">        
-      <header class="sticky top-0 z-50 bg-white dark:bg-gray-950 shadow-sm">
+      <header class="sticky top-0 z-50 bg-white  shadow-sm">
       <TapBar />
     </header>
     <MainNav />
