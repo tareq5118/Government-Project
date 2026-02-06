@@ -93,24 +93,16 @@ export const useNews = () => {
     },
   ]);
 
-  // دالة لجلب خبر واحد حسب الـ id
-//   const getNewsById = (id) => {
-//     return newsList.value.find((item) => item.id === id);
-//   };
+ 
 const getNewsById = (id) => {
-  // حول الـ id الوارد (من الرابط) إلى رقم
   const numericId = Number(id)
   
-  // ابحث باستخدام الرقم
   return newsList.value.find(item => item.id === numericId)
 }
   
 
-  // عدد الأخبار الكلي (مفيد لاحقًا)
   const totalNews = computed(() => newsList.value.length);
 
-  // يمكنك إضافة فلاتر أو فرز لاحقًا هنا
-  // مثال: أحدث 5 أخبار
   const latestNews = computed(() => {
     return [...newsList.value]
       .sort((a, b) => new Date(b.date) - new Date(a.date))

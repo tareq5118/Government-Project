@@ -114,7 +114,6 @@
 </template>
 
 <script setup>
-import ButtonUI from "~/components/ui/ButtonUI.vue";
 
 const route = useRoute();
 const { getNewsById } = useNews();
@@ -124,7 +123,7 @@ const newsItem = getNewsById(numericId);
 
 useHead({
   title: newsItem ? `${newsItem.title} | الأخبار` : "الخبر غير موجود",
-  meta: [   
+  meta: [
     {
       name: "description",
       content: newsItem?.summary || "صفحة تفاصيل خبر",

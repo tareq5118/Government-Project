@@ -6,7 +6,7 @@ const props=defineProps(['newsItems'])
 </script>
 <template>
   <section
-    class="py-10 md:py-12 md:w-[85%] md:mx-auto bg-white rounded-lg mb-10"
+    class="py-10 md:py-6 md:w-[85%] md:mx-auto bg-white rounded-lg mb-10"
   >
     <div class="container mx-auto px-4 sm:px-0">
       <h2 class="text-2xl md:text-3xl font-bold text-center mb-8">
@@ -22,6 +22,7 @@ const props=defineProps(['newsItems'])
             class="mb-4 rounded-2xl w-full h-62.5 hover:scale-105 object-cover hover:cursor-pointer"
             :src="news.image"
             alt=""
+            loading="lazy"
             width="370"
             height="250"
           />

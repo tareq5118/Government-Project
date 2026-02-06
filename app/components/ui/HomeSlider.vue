@@ -34,6 +34,7 @@
           </div>
           <img
             :src="slide.image"
+            loading="lazy"
             alt="خبر"
             class="w-full h-full object-cover md:rounded-2xl rounded-xl"
           />
@@ -104,14 +105,14 @@ const slides = ref([
     date: "2026-01-28",
     title:
       " فخامة رئيس الجمهورية السيد أحمد الشرع، يرافقه وزير الخارجية والمغتربين السيد أسعد حسن الشيباني، ووزير الدفاع اللواء مرهف أبو قصرة، يلتقي الرئيس الروسي السيد فلاديمير بوتين وكبار المسؤولين في قصر الكرملين بالعاصمة موسكو",
-    link: "/news/لقاء-الرئيس-مع-بوتين",
+    link: "/news",
   },
   {
     image: "/images/01KEKDGY3KHQVWXSRHD20ZPX0W-featured_image_thumb.webp",
     date: "2026-01-25",
     title:
       "وزير الخارجية والمغتربين يتلقى اتصالًا هاتفيًّا من وزير خارجية المملكة الأردنية الهاشمية",
-    link: "/news/بيان-جديد",
+    link: "/news",
   },
 ]);
 

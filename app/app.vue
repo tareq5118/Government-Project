@@ -6,10 +6,8 @@
     <!-- <NuxtPage/>
     <NuxtLayout/> -->
     <NuxtLayout>
-       <NuxtPage/>
-       
-      </NuxtLayout>
-   
+      <NuxtPage/>
+    </NuxtLayout>
 
 
 

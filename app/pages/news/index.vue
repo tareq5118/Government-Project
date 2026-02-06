@@ -1,13 +1,13 @@
 <!-- pages/news.vue -->
 <template>
-<NewsSection :newsItems="newsList" />
+  <NewsSection :newsItems="newsList" />
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import { useNews } from '~/composables/useNews';
-import NewsSection from '~/components/NewsSection.vue';
-const {newsList}=useNews();
+import { ref } from "vue";
+import { useNews } from "~/composables/useNews";
+import NewsSection from "~/components/NewsSection.vue";
+const { newsList } = useNews();
 // const newsItems = ref([
 //   {
 //     id: 1,
@@ -52,7 +52,7 @@ const {newsList}=useNews();
 //      summary: 'تؤكد الجمهورية العربية السورية التزامها الكامل بوحدة أراضيها وسيادتها الوطنية، وتدين أي تدخل خارجي يمس استقلالها...',
 //      link: '#',
 //       image:'/images/01KC9J6W31PGTRJ8TW12PCMF1R-featured_image_thumb (1).webp'
-      
+
 //    },
 //    {
 //      id: 6,
@@ -87,16 +87,16 @@ const {newsList}=useNews();
 //       image:'/images/01K9VSGX328VP9RMPS92B1C62Y-featured_image_thumb.webp'
 //    },
 
-
 // ]);
 // meta tags
 useHead({
-  title: 'الأخبار | وزارة الخارجية والمغتربين',
+  title: "الأخبار | وزارة الخارجية والمغتربين",
   meta: [
     {
-      name: 'description',
-      content: 'آخر الأخبار والبيانات الرسمية الصادرة عن وزارة الخارجية والمغتربين في الجمهورية العربية السورية'
-    }
-  ]
-})
+      name: "description",
+      content:
+        "آخر الأخبار والبيانات الرسمية الصادرة عن وزارة الخارجية والمغتربين في الجمهورية العربية السورية",
+    },
+  ],
+});
 </script>

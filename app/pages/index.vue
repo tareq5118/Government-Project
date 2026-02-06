@@ -1,6 +1,8 @@
 <script setup>
 import NewsSection     from '~/components/NewsSection.vue'
+import contact from './contact.vue';
 import ServicesSection  from '~/components/ServicesSection.vue'
+import HomeSlider from '~/components/ui/HomeSlider.vue';
 useHead({
   title: 'وزارة الخارجية والمغتربين - الجمهورية العربية السورية',
   meta: [
@@ -16,12 +18,9 @@ useHead({
 })
 </script>
 <template>
-
-  <div class="flex flex-col gap-10 md:gap-12 lg:gap-16">
-    <!-- <NewsSection    class="order-1 md:order-0" /> -->
-    <!-- <NuxtPage/> -->
-    <!-- <ServicesSection class="order-2 md:order-0" /> -->
-     
-  </div>
+    <HomeSlider />
+<ServicesSection/>
+<contact/>
+ 
 </template>
 

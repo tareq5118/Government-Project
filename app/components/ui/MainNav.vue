@@ -26,24 +26,14 @@ let Links = ref([
     link: "/contact",
   },
 ]);
-// let openMenu=ref(false);
 const props = defineProps({
   mobile: { type: Boolean, default: false },
 });
-// defineEmits(['close'])
-// function menuOpen(){
-//     openMenu.value=!openMenu.value;
-// }
+
 </script>
 <template>
   <nav  class="  max-w-full overflow-x-hidden h-full bg-Primary">
-    <!-- <ul
-      class="md:flex w-full h-11 py-8 md:items-center md:gap-3 px-4 sm:w-[92%] mx-auto"
-    > -->
-    <!-- <span  class="absolute md:hidden  hover:cursor-pointer text-4xl" @click="menuOpen()">
-{{ openMenu?'😑':'🟰' }}
-        
-    </span> -->
+   
     <ul
       class="bg-Primary mx-auto py-1 md:flex md:items-center md:gap-3 md:w-[85%] md:mx-auto md:h-15 md:static absolute w-full duration-700 ease-in-out"
       :class="[props.mobile ? 'left-0  ' : 'hidden ']"
@@ -54,7 +44,7 @@ const props = defineProps({
         ,
         :v-key="link.name"
       >
-        <nuxt-link class=""  :to="link.link">{{ link.name }}
+        <nuxt-link  class="" @click="$emit('close')"  :to="link.link">{{ link.name }}
           
         </nuxt-link>
       </li>

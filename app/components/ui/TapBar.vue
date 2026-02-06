@@ -2,10 +2,21 @@
 import MainNav from "./MainNav.vue";
 
 let openMenu = ref(false);
+const isScrolled = ref(false);
+const handleScroll = () => {
+  isScrolled.value = window.scrollY > 60;
+};
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll);
+});
+onUnmounted(() => {
+  window.removeEventListener("scroll", handleScroll);
+});
 </script>
 <template>
   <div
-    class="flex justify-between bg-Primary  md:bg-white items-center mx-auto md:w-[85%] md:mx-auto h-full py-7.5  md:bg-[url(/images/star.png)]"
+    class="flex justify-between bg-Primary md:bg-white items-center mx-auto md:w-[85%] md:mx-auto h-full md:bg-[url(/images/star.png)] transition-all ease-linear duration-200"
+    :class="isScrolled ? ' py-4 ' : ' py-7.5'"
   >
     <div class="me-4 ms-0 md:mx-2">
       <nuxt-link to="/">
@@ -79,7 +90,7 @@ let openMenu = ref(false);
           viewBox="0 0 24 24"
           stroke-width="1.5"
           stroke="currentColor"
-          class="size-8 md:text-Primary text-logo  rounded-xl border"
+          class="size-8 md:text-Primary text-logo rounded-xl border"
         >
           <path
             stroke-linecap="round"
@@ -91,8 +102,11 @@ let openMenu = ref(false);
     </span>
 
     <div class="text-sm sm:text-base hover:cursor-pointer hidden">icons</div>
+    
   </div>
-  <div v-if="openMenu" class="bg-Primary ">
-    <MainNav class="" :mobile="true" @close="openMenu = false" />
+  <span class="border h-px w-full block border-Primary"></span>
+
+  <div v-if="openMenu" class="bg-Primary">
+    <MainNav class="sm:hidden" :mobile="true" @close="openMenu = false" />
   </div>
 </template>
