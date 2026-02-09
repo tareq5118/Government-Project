@@ -1,5 +1,5 @@
 <script setup>
-import NewsSection     from '~/components/NewsSection.vue'
+import MinisterOverview from '~/components/MinisterOverview.vue';
 import contact from './contact.vue';
 import ServicesSection  from '~/components/ServicesSection.vue'
 import HomeSlider from '~/components/ui/HomeSlider.vue';
@@ -20,6 +20,7 @@ useHead({
 <template>
     <HomeSlider />
 <ServicesSection/>
+<MinisterOverview/>
 <contact/>
  
 </template>

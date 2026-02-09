@@ -1,7 +1,7 @@
 <template>
-  <section class="py-10 md:py-12  mb-10 md:w-[85%] md:mx-auto">
-    <div class="container mx-auto px-4">
-      <h2 class="text-2xl md:text-3xl font-bold  mb-8 t">
+  <section class=" md:py-6 pt-10 mt-6 md:mt-2 pb-8 px-7.5 border border-gray-100 rounded-xl">
+    <!-- <div class=" mx-auto px-4"> -->
+      <h2 class="text-2xl md:text-3xl font-bold  mb-8 ">
         الخدمات
       </h2>
 
@@ -31,20 +31,10 @@
 
               <ButtonUI >عرض المزيد</ButtonUI>
           </div>
-        </div>
+        <!-- </div> -->
       </div>
 
-      <div class="text-center mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-4xl mx-auto">
-        <NuxtLink to="/missions" class="bg-syria-green text-white py-4 rounded hover:bg-opacity-90">
-          بعثاتنا في الخارج
-        </NuxtLink>
-        <NuxtLink to="/offices" class="bg-official-dark text-white py-4 rounded hover:bg-opacity-90">
-          مكاتب الوزارة
-        </NuxtLink>
-        <NuxtLink to="/services" class="bg-syria-red text-white py-4 rounded hover:bg-opacity-90">
-          جميع الخدمات
-        </NuxtLink>
-      </div>
+     
     </div>
   </section>
 </template>

@@ -37,9 +37,9 @@ const contact = ref([
 ]);
 </script>
 <template>
-  <section class="py-10 w-[85%] mx-auto">
+  <section class="py-10 ">
     <h2
-      class="text-background font-semibold text-2xl md:text-3xl 2xl:text-4xl leading-12 mb-0"
+      class="text-background font-semibold text-2xl md:text-3xl lg:text-4xl leading-12 mb-0"
     >
       تواصل معنا
     </h2>

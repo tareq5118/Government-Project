@@ -1,8 +1,8 @@
 <template>
   <div
-    class="relative mt-6 h-125 md:h-150 lg:h-150  overflow-hidden w-[85%] mx-auto"
+    class="relative mt-6 h-125 flex items-center  overflow-hidden "
   >
-    <TransitionGroup name="fade" tag="div" class="absolute inset-0">
+    <TransitionGroup name="fade"  tag="div" class="absolute inset-0">
       <div
         v-for="(slide, index) in slides"
         :key="index"
@@ -10,16 +10,16 @@
         class="absolute inset-0"
       >
         <div
-          class="relative px-6  gap-2 flex flex-col-reverse md:flex-row justify-between items-center bg-[url(/images/star.png)]"
+          class="relative   gap-2 flex flex-col-reverse md:flex-row justify-between items-center bg-[url(/images/star.png)] "
         >
           <div
-            class="flex flex-col justify-between  items-start md:px-8  px-2  text-black"
+            class="flex flex-col justify-between  items-start md:pr-12 md:mr-12   px-2  text-black"
           >
             <p class="text-sm md:text-base lg:text-lg opacity-90 sm:mb-2">
               {{ slide.date }}
             </p>
             <h2
-              class="text-xl sm:text-2xl md:text-3xl lg:text-3xl font-bold max-w-4xl my-2 line-clamp-2 md:line-clamp-3"
+              class="text-xl sm:text-2xl md:text-3xl lg:text-3xl font-bold max-w-4xl my-2 line-clamp-2 md:line-clamp-3 leading-relaxed"
             >
               {{ slide.title }}
             </h2>
@@ -44,7 +44,7 @@
 
     <button
       @click="prevSlide"
-      class="absolute left-4 top-1/2 -translate-y-1/2 z-10 border border-black text-gray-300 hover:bg-Primary hover:text-white p-1 md:p-3 rounded-full transition"
+      class="hidden md:block absolute left-0 top-1/2 cursor-pointer -translate-y-1/2 z-10 border border-black text-gray-300 hover:bg-Primary hover:text-white p-1 md:p-3 rounded-full transition"
       aria-label="السابق"
     >
       <svg
@@ -63,7 +63,7 @@
 
     <button
       @click="nextSlide"
-      class="absolute right-0 top-1/2 -translate-y-1/2 z-10 border border-black text-gray-300 hover:bg-Primary hover:text-white p-1 md:p-3 rounded-full transition"
+      class="hidden md:block absolute right-0 top-1/2 cursor-pointer -translate-y-1/2 z-10 border border-black text-gray-300 hover:bg-Primary hover:text-white p-1 md:p-3 rounded-full transition"
       aria-label="التالي"
     >
       <svg
